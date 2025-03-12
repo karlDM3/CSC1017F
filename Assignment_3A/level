@@ -1,0 +1,26 @@
+# University of Cape Town
+# Dumisani Mathabathe
+# 12/03/2025
+
+# Input the travel time and the air temperature
+a = float(input("Enter the travel time (milliseconds):\n"))
+b = float(input("Enter the air temperature (Centigrade):\n"))
+
+# Calculate the distance it travels and the water level
+l = (331.3+0.606*b)*(a/2000) -0.5
+z= 4.27 - l
+p = z/4.27
+
+# Conditions to output the correct colour
+if p<=0.10:
+    print("The water level is %.2f." %z)
+    print("Light: Red")
+elif 0.10<p<=0.50:
+    print("The water level is %.2f." %z)
+    print("Light: Orange.")
+elif 0.50<p<=0.75:
+    print("The water level is %.2f." %z)
+    print("Light: Yellow.")
+elif 0.75<p:
+    print("The water level is %.2f." %z)
+    print("Light: Green.")
